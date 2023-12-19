@@ -1,0 +1,71 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #F0EBDE;
+    color: #fff;
+}
+
+#dashboard-container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+h1, h2 {
+    color: #354052;
+}
+
+h1 {
+    background-color:  #4EB86C;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
+    border: 4px solid #007bff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#profile-email{
+    color: #007bff;
+}
+#profile-city{
+    color: #007bff;
+}
+
+#profile-info {
+    flex-grow: 1;
+}
+
+#achievements-section {
+    margin-top: 20px;
+}
+
+#achievements-list {
+    list-style: none;
+    padding: 0;
+}
+
+.achievement-item {
+    margin-bottom: 15px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    color: #354052;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

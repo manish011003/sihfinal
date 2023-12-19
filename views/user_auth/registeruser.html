@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/mainl2.css" />
+    <title>Sign Up</title>
+    <noscript>
+        <link rel="stylesheet" href="assets/css/mainl2.css" />
+    </noscript>
+</head>
+
+<body>
+    <div class="form-container">
+        <p class="title">Sign Up</p>
+        <!-- Registration Form -->
+        <form class="form" id="regform" method="POST">
+            <!-- Email Input -->
+            <input type="email" class="input" id="email" placeholder="Email" required>
+            <!-- Use username instead of email for registration -->
+            <input type="text" class="input" id="username" placeholder="Username" required>
+            <!-- Password Input -->
+            <input type="password" class="input" id="password" placeholder="Password" required>
+            <!-- Submit Button -->
+            <button class="form-btn" value="Submit Form" type="submit">Sign Up</button>
+        </form>
+
+        <!-- Login Link -->
+        <p class="sign-up-label">
+            Already have an account? <span class="sign-up-link"> <a href="/login">Log In</a> </span>
+        </p>
+    </div>
+    <script>
+        const form = document.getElementById('regform')
+        form.addEventListener('submit',registerUser)
+
+       async function registerUser(event) {
+            event.preventDefault()
+            const email = document.getElementById('email').value
+            const username = document.getElementById('username').value
+            const password = document.getElementById('password').value
+
+            const result = await fetch('/api/user',{
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json'
+					},
+					body: JSON.stringify({
+                        email,
+						username,
+						password,
+					})
+				}).then((res) => res.json())
+
+				if (result.status === 'ok') {
+					// everythign went fine
+					alert('Success')
+				} else {
+					alert(result.error)
+				}
+			}
+    </script>
+</body>
+</html>

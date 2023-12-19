@@ -1,0 +1,58 @@
+<!-- views/index.ejs -->
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Welcome to Hunger-E</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+<body class="is-preload landing">
+    <div id="page-wrapper">
+        <!-- Header -->
+        <header id="header">
+            <h1 id="logo"><a href="/">Hunger-E</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/map">Map</a></li>
+                    <li>
+                        <a href="#">Sell E-waste</a>
+                        <ul>
+                            <li><a href="http://localhost:5001">Sell Smartphone</a></li>
+                            <!-- Add other links as needed -->
+                        </ul>
+                    </li>
+                    <li><a href="/views/others/aboutUs.html">About Us</a></li>
+                    <li><a href="/views/others/contactUs.html">Contact us</a></li>
+                    <% if (user) { %>
+                        <li><a href="/dashboard" class="button primary"><%= user.username %></a></li>
+                    <% } else { %>
+                        <li><a href="/login" class="button primary">Login</a></li>
+                    <% } %>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Rest of your HTML content remains the same -->
+        <!-- ... -->
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+                <li><a href="#" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+                <!-- Add other social media links as needed -->
+            </ul>
+            <ul class="copyright">
+                <li>&copy; DECOY. All rights reserved.</li>
+            </ul>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Add other script includes as needed -->
+</body>
+</html>

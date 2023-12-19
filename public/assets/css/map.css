@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+  background: #4EB86C;
+  height: 10%;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.nav-links ul li::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.hero {
+  display: flex;
+  height: 90%;
+}
+
+#map {
+  height: 100%;
+  width: 60%;
+}
+
+.right {
+  width: 40%;
+  background: #fdefe7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  width: 80%;
+  height: 80%;
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+}
+
+select,
+button {
+  margin-top: 10px;
+  background: #4EB86C;
+  padding: 10px 20px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 70%;
+  font-size: 15px;
+  outline: 0;
+  text-align: center;
+}
+
+button {
+  background-color: #4EB86C;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 70%;
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: #74c69d;
+}
+
+/* p {
+    margin-top: 10px;
+  font-size: 15px;
+  background: #74c69d;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 70%;
+} */
+
+.flatpickr-calendar {
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  outline: 0;
+  border: none;
+}
+
+.flatpickr-input {
+  width: 70%;
+  height: 40px;
+  padding: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+  background: #4EB86C;
+  color: #fff;
+}
+::placeholder{
+    color: #fff;
+}
+
+.flatpickr-monthDropdown-months,
+.flatpickr-monthDropdown-year {
+  color: #fff;
+}
+
+.flatpickr-day {
+  color: #fff;
+}
+
+
+
+select {
+margin-top: 10px;
+background: #4EB86C;
+padding: 10px 20px;
+color: #fff;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+width: 70%;
+font-size: 15px;
+outline: 0;
+appearance: none; /* Remove default arrow in Firefox */
+-webkit-appearance: none; /* Remove default arrow in Chrome/Safari/Edge */
+}
+
+select:hover {
+background-color: #74c69d;
+}
+
+/* Style the options within the dropdown */
+select option {
+background-color: #4EB86C;
+color: #fff;
+}
+
+/* Hover effect on dropdown options */
+select option:hover {
+background-color: #74c69d;
+}
+
+/* Focus effect on dropdown */
+select:focus {
+border: 2px solid #74c69d;
+}
+
+/* Custom styling for the dropdown container */
+.dropdown-container {
+position: relative;
+width: 70%;
+}
+
+/* Custom styling for the arrow icon */
+.dropdown-container::after {
+content: '\25BC'; /* Unicode character for down arrow */
+position: absolute;
+top: 50%;
+right: 10px;
+transform: translateY(-50%);
+color: #fff;
+pointer-events: none;
+}
+
+/* Hide default arrow in Firefox */
+.dropdown-container select::-ms-expand {
+display: none;
+}
+#confirm{
+  background-color: #4EB86C;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 70%;
+  font-size: 15px;
+}
+input{
+  text-align: center;
+}

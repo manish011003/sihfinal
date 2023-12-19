@@ -1,0 +1,161 @@
+ <html>
+	<head>
+		<title>Sell e-waste</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/sellewaste.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload landing">
+		<div id="page-wrapper">
+
+			
+
+<!-- Header -->
+<header id="header">
+	<h1 id="logo"><a href="index.html">Hunger-E</a></h1>
+	<nav id="nav">
+		<ul>
+			<li><a href="index.html">Home</a></li>
+
+			<li><a href="map.html">Map</a></li>
+			<li>
+				<a href="sellewaste.html">Other E-waste</a>
+				<ul>
+					<li><a href="#">Sell Smartphone</a></li>
+					<li><a href="#">Sell Laptop</a></li>
+					<li><a href="#">Sell Desktop Computer</a></li>
+					<li><a href="#">Sell Tablets</a></li>
+					<li><a href="#">Sell Smart TV</a></li>
+					<li><a href="#">Sell Microwave Oven</a></li>
+					<li><a href="#">Sell Refrigerator</a></li>
+					<li><a href="#">Sell Washing Machine</a></li>
+					<li><a href="#">Sell Digital Camera</a></li>
+					<li>
+						<a href="#">More e-waste</a>
+						<!-- <ul>
+							<li><a href="#">Batteries</a></li>
+							<li><a href="#">Bulb</a></li>
+							<li><a href="#">Toys</a></li>
+							<li><a href="#">Others</a></li>
+						</ul> -->
+					</li>
+				</ul>
+			</li>
+			
+
+			<li><a href="aboutUs.html">About Us</a></li>
+			<li><a href="contactUs.html">Contact us</a></li>
+			<li><a href="user_authentication/forntend/loginpage.html" class="button primary">Login</a></li>
+		</ul>
+	</nav>
+</header>
+
+			
+	<!-- Banner -->
+		<section id="banner">
+			<div class="content">
+					<!-- <input type="text" name="text" class="input" placeholder="search device"> -->
+					<!-- <select name="phone" id="phone">
+					  
+					  <option value="apple">Apple</option>
+					  <option value="lg">lg</option>
+					  <option value="vivo">VIVO</option>
+					  <option value="">
+						  <option value="">ram</option>
+						  <option value="">HONOR</option>
+						  <option value="">HONOR</option>
+					  </option>
+					  <option value="">ASUS</option>
+					  <option value="">GOOGLE</option>
+					  <option value="">Samsung</option>
+					  <option value="">Huawei</option>
+					  <option value="">Nokia</option>
+					  <option value="">ONE-PLUS</option>
+					</select> -->
+					<!-- <span class="icon">
+					  <svg width="19px" height="19px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="1" d="M14 5H20" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="1" d="M14 8H17" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 6.25 6.25 2 11.5 2" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="1" d="M22 22L20 20" stroke="#000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+					</span> -->
+<div class="form">
+					<form name="form1" id="form1" action="/action_page.php">
+						Brands: <select name="subject" id="subject">
+						  <option value="" selected="selected">Select Brand</option>
+						</select>
+						<br><br>
+						Device Name: <select name="topic" id="topic">
+						  <option value="" selected="selected">Please select subject first</option>
+						</select>
+						<br><br>
+						Model No/Name: <select name="chapter" id="chapter">
+						  <option value="" selected="selected">Please select topic first</option>
+						</select>
+						<br><br>
+						<input type="submit" value="Submit">
+					  </form>
+</div>
+				'<div class="img">
+				<span class="image"><img src="images/Hunger_E.png" alt="" /></span>
+			</div>
+		
+		</section>
+
+					
+			
+</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body><script>
+		var subjectObject = {
+  "Sony": {
+   "Sony Models":["Xbox One","Xbox Series X"]
+},
+
+  "Nintendo": {
+    "Nintendo Models":["Switch Pro","Switch"]
+},
+
+  "NVIDIA":  {
+   "NVIDIA Models":["Shield TV","Shield TV"]
+},
+
+ 
+
+ 
+}
+window.onload = function() {
+  var subjectSel = document.getElementById("subject");
+  var topicSel = document.getElementById("topic");
+  var chapterSel = document.getElementById("chapter");
+  for (var x in subjectObject) {
+    subjectSel.options[subjectSel.options.length] = new Option(x, x);
+  }
+  subjectSel.onchange = function() {
+    //empty Chapters- and Topics- dropdowns
+    chapterSel.length = 1;
+    topicSel.length = 1;
+    //display correct values
+    for (var y in subjectObject[this.value]) {
+      topicSel.options[topicSel.options.length] = new Option(y, y);
+    }
+  }
+  topicSel.onchange = function() {
+    //empty Chapters dropdown
+    chapterSel.length = 1;
+    //display correct values
+    var z = subjectObject[subjectSel.value][this.value];
+    for (var i = 0; i < z.length; i++) {
+      chapterSel.options[chapterSel.options.length] = new Option(z[i], z[i]);
+    }
+  }
+}
+	</script>
+</html>

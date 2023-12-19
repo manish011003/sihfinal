@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leaflet Map with Nearest E-Waste Locations</title>
+  <link rel="stylesheet" href="/assets/css/map.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body>
+  <div class="container">
+
+    <!--  Navigation bar -->
+    <nav>
+      <div class="nav-links">
+        <ul>
+          <li><a href="/index.html" onclick="findNearestLocation()">Home</a></li>
+          <li><a href="#" onclick="showAllLocations()">About</a></li>
+          <li><a href="#" onclick="showContact()">Contact</a></li>
+          <li><a href="#" onclick="showLogin()">Login</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Leaflet map container -->
+    <div class="hero">
+      <div id="map"></div>
+
+      <!-- Display the name of the nearest e-waste location -->
+      <div class="right">
+        <div class="card">
+          <p id="nearestLocationName"></p>
+
+          <!-- Buttons -->
+          <button onclick="findNearestLocation()">Find Nearest E-Waste Location</button>
+          <button onclick="showAllLocations()">Show All E-Waste Locations</button>
+
+          <!-- Dropdown button to select nearest e-waste location -->
+          <select id="locationDropdown">
+            <option value="" disabled selected>Select a location</option>
+            <!-- Options will be dynamically added based on user's location -->
+          </select>
+
+          <button id="confirm">Confirm Exchange</button>
+
+          <!-- Date picker -->
+          <input type="text" id="datePicker" placeholder="Select date">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/assets/js/map.js"></script>
+</body>
+</html>
