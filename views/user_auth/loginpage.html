@@ -15,22 +15,21 @@
 <body>
     <div class="form-container">
         <p class="title">Welcome back</p>
-        <form class="form" action="/auth/login" method="POST" onsubmit="handleLoginFormSubmission(event);">
+        <form class="form" action="/auth/login" method="POST" autocomplete="off" onsubmit="handleLoginFormSubmission(event);">
             <!-- Use email and password for login -->
             <input type="email" class="input" placeholder="email" name="email" required>
             <input type="password" class="input" placeholder="password" name="password" required>
             <p class="page-link">
                 <span class="page-link-label">Forgot Passwor    d?</span>
             </p>
-            <button class="form-btn" type="submit">Log in</button>
+            <button class="form-btn" type="submit"><a href="/userpost">Log in</a></button>
         </form>
         <p class="sign-up-label">
             Don't have an account?<span class="sign-up-link"> <a href="/register">Sign Up</a> </span>
         </p>
         
         <!-- Consider adding a Google login button (optional) -->
-        
-            <span>Log in with Google</span>
+
         </div>
     </div>
 </body>

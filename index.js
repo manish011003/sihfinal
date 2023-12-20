@@ -44,6 +44,14 @@ app.get("/shoplogin", (req, res) => {
 
 app.get("/partner", (req, res) => {
     res.sendFile(path.join(__dirname, "views/abcd", "part.html"));
+
+});
+
+app.get("/userpost", (req, res) => {
+    res.sendFile(path.join(__dirname, "views/user_auth", "homeuser.html"));
+});
+app.get("/profile", (req, res) => {
+    res.sendFile(path.join(__dirname, "views/user_auth", "profile.html"));
 });
 
 app.use('/auth', userRoutes);
