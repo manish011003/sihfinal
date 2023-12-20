@@ -2,10 +2,12 @@
 <html>
 	<head>
 		<title>Welcome to Hunger-E</title>
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-mhqPdrcsdh3Nx6IxLz1R5XizdbDEMFDEHzl4GbT4SfcNcBE0Jw5QWrPVvn9vDCSXqu3eOPzKKtUXhi56ZqNT7Q==" crossorigin="anonymous" />
 	</head>
 	<body class="is-preload landing">
 		
@@ -40,11 +42,11 @@
 									
 									<!-- <li><a href="language.html">Language</a></li> -->
 									<li><a href="views/others/aboutUs.html">About Us</a></li>
-									<li><a href="views/others/contactUs.html">Contact us</a></li>
+									<li><a href="/partner">Our Partners</a></li>
 									<li><a href="/login" class="button primary">Login</a>
 										<ul>
-											<li><a href="\src\views\user_auth\shoploginpage.html">User login</a></li>
-											<li><a href="#">Mini E-Center</a></li>
+											<li><a href="/login">User login</a></li>
+											<li><a href="/shoplogin">Mini E-Center</a></li>
 										</ul>
 									</li>								</ul>
 							</nav>
@@ -68,22 +70,31 @@
 					<span class="image fit main"><img src="images/ey-waste-bin-full-of-e-waste.jpg" alt="" /></span>
 					<div class="content">
 						<div class="container">
+						
 							<div class="row">
-								<div class="col-4 col-12-medium">
-									<header>
-										<h2>What is e waste?</h2>
-										<p>E-waste refers to electronic waste thatneeds to get recycled  </p>
-									</header>
-								</div>
-								<div class="col-4 col-12-medium">
-									<p>Electronic waste or e waste, is an umbrella term, encompassing all electronic appliances, products, components, and accessories that are broken, discarded, obsolete or have reached the end of their product life cycle. Because of its sheer nature and hazarduous constituting elements, such as chemical substances, plastic, metals, etc., it is imperative to ensure that e waste is properly managed and treated.
-									</p>
-								</div>
-								<div class="col-4 col-12-medium">
-									<p>The e waste Management Rules (2016) state that every producer/manufacturer generating e waste, in addition to the consumers using them, is liable by law to recycle the scrap through an authorized channel (licensed company, such as Hulladek Recycling).</p>
-								</div>
+								<div class="cont"><canvas id="pieChart"></canvas></div>
+
 							</div>
-						</div>
+							<div class="contain">
+<!-- Modify this section in your HTML
+<div id="liveCounter">Total Credit Points: <span id="totalCounter">0</span> <i class="fas fa-coins"></i></div>
+							</div>
+							
+
+						</div> -->
+
+
+
+
+
+<!-- Modify this section in your HTML -->
+<div id="liveCounter">Total Credit Points: <span id="totalCounter">0</span> <i class="fas fa-coins"></i></div>
+<div class="card">
+    <div class="card-header">E-Waste Statistics</div>
+    <div class="card-content">
+        <p>Check out the statistics of E-Waste recycling with our interactive pie chart.</p>
+    </div>
+</div>
 					</div>
 					<a href="#two" class="goto-next scrolly">Next</a>
 				</section>
@@ -127,7 +138,8 @@
 							<h2>Classification of e waste</h2>
 							<p>e waste can be classified on the basis of its composition and component, or on the basis of the utility and purpose served. Ferrous and nonferrous metals, glass, plastics, pollutants, and other are the six categories of materials reported for e waste composition. </p>
 						</header>
-			<!-- Footer -->
+			<!-- Footer -->	  
+			</script>
 				<footer id="footer">
 
 					<ul class="icons">
@@ -165,14 +177,7 @@ function googleTranslateElementInit() {
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			
 			<button id="logo" onclick="readText()">🔊</button> 
 
 			<script> 
@@ -189,9 +194,20 @@ function googleTranslateElementInit() {
 					alert('Your browser does not support the Web Speech API. Please use a modern browser.');
 				  }
 				}
+
 		
 			
 			  </script>
+		
+		
+			  <script src="assets/js/jquery.min.js"></script>
+			  <script src="assets/js/jquery.scrolly.min.js"></script>
+			  <script src="assets/js/jquery.dropotron.min.js"></script>
+			  <script src="assets/js/jquery.scrollex.min.js"></script>
+			  <script src="assets/js/browser.min.js"></script>
+			  <script src="assets/js/breakpoints.min.js"></script>
+			  <script src="assets/js/util.js"></script>
+			  <script src="assets/js/main.js"></script>
 <ul class="copyright">
 	<li>&copy; DECOY. All rights reserved.</li><li></a></li>
 </ul>

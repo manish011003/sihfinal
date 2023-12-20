@@ -8,7 +8,7 @@ const getContacts = asyncHandler(async (req, res) => {
 });
 
 const createContact = asyncHandler(async (req, res) => {
-  console.log("the fucking body is:", req.body);
+  console.log("the  body is:", req.body);
   const { name, email, phone } = req.body;
   if (!name || !email || !phone) {
     res.status(400);

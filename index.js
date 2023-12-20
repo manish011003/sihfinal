@@ -38,8 +38,12 @@ app.get("/map", (req, res) => {
 app.get("/quiz", (req, res) => {
     res.sendFile(path.join(__dirname, "views/quiz", "popup1.html"));
 });
-app.get("/login", (req, res) => {
-    res.sendFile(path.join(__dirname, "views/user_auth", "loginpage.html"));
+app.get("/shoplogin", (req, res) => {
+    res.sendFile(path.join(__dirname, "views/user_auth", "shoploginpage.html"));
+});
+
+app.get("/partner", (req, res) => {
+    res.sendFile(path.join(__dirname, "views/abcd", "part.html"));
 });
 
 app.use('/auth', userRoutes);

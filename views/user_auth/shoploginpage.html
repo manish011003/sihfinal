@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/shopregistrationpage.css" />
+    <title>Login Page</title>
+    <noscript>
+        <link rel="stylesheet" href="" />
+    </noscript>
+    <script>
+        // Redirect to the dashboard after a short delay (e.g., 3 seconds) on successful login
+        function redirectToDashboard() {
+            console.log('Redirecting to dashboard...');
+            // Add a slight delay before redirecting (optional)
+            setTimeout(() => {
+                window.location.href = "/dashboard";
+            }, 500); // 500 milliseconds delay (adjust as needed)
+        }
+        
+        // Prevent form submission and trigger redirection
+        function handleLoginFormSubmission(event) {
+            event.preventDefault(); // Prevent default form submission
+            redirectToDashboard(); // Trigger the redirection
+        }
+    </script>
+</head>
+
+<body>
+    <div class="form-container">
+        <p class="title">Welcome back</p>
+        <form class="form" action="/auth/login" method="POST" onsubmit="handleLoginFormSubmission(event);">
+            <!-- Use username instead of email for login -->
+            <input type="text" class="input" placeholder="UPRN NO" name="username" required>
+            <input type="password" class="input" placeholder="Password" name="password" required>
+            <p class="page-link">
+                <span class="page-link-label">Forgot Password?</span>
+            </p>
+            <button class="form-btn" type="submit">Log in</button>
+        </form>
+        <p class="sign-up-label">
+            Don't have an account?<span class="sign-up-link"> <a href="/register">Register</a> </span>
+        </p>
+        
+        <!-- Consider adding a Google login button (optional) -->
+        </div>
+    </div>
+</body>
+
+</html>

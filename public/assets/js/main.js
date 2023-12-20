@@ -299,3 +299,299 @@ function sendMessage() {
         document.getElementById('user-input').value = '';
     }
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+	const totalCounterElement = document.getElementById('totalCounter');
+	let totalDevicesSold = 0;
+
+	// Your dataset goes here
+	const dataset = [
+    
+
+
+
+
+{
+	"username": "user1",
+	"device_sold": "smartphone",
+	"device_details": {
+	  "brand": "Samsung",
+	  "model": "Galaxy S10",
+	  "storage_gb": 128
+	},
+	"condition": "good",
+	"points_earned": 50
+  },
+  { 
+
+
+	"username": "user2",
+	"device_sold": "laptop",
+	"device_details": {  
+	  "brand": "Dell",
+	  "model": "XPS 13",
+	  "storage_gb": 256,
+	  "ram_gb": 8
+	},
+	"condition": "excellent",
+	"points_earned": 100
+  },
+  { 
+
+
+"username": "user2",
+"device_sold": "laptop",
+"device_details": {  
+"brand": "Dell",
+"model": "XPS 13",
+"storage_gb": 256,
+"ram_gb": 8
+},
+"condition": "excellent",
+"points_earned": 100
+},
+{ 
+
+
+"username": "user2",
+"device_sold": "laptop",
+"device_details": {  
+"brand": "Dell",
+"model": "XPS 13",
+"storage_gb": 256,
+"ram_gb": 8
+},
+"condition": "excellent",
+"points_earned": 100
+},
+  {
+	"username": "user3",
+	"device_sold": "smart TV",
+	"device_details": {
+	  "brand": "LG",
+	  "model": "OLED55C9PUA",
+	  "screen_size_inches": 55
+	},
+	"condition": "fair",
+	"points_earned": 80
+  },
+  {
+	"username": "user4",
+	"device_sold": "game console",
+	"device_details": {
+	  "brand": "Sony",
+	  "model": "PlayStation 5",
+	  "storage_gb": 825
+	},
+	"condition": "like new",
+	"points_earned": 120
+  },
+  {
+	"username": "user4",
+	"device_sold": "game console",
+	"device_details": {
+	  "brand": "Sony",
+	  "model": "PlayStation 5",
+	  "storage_gb": 825
+	},
+	"condition": "like new",
+	"points_earned": 120
+  },
+  {
+	"username": "user4",
+	"device_sold": "game console",
+	"device_details": {
+	  "brand": "Sony",
+	  "model": "PlayStation 5",
+	  "storage_gb": 825
+	},
+	"condition": "like new",
+	"points_earned": 120
+  },
+  {
+	"username": "user1",
+	"device_sold": "digital camera",
+	"device_details": {
+	  "brand": "Canon",
+	  "model": "EOS Rebel T7i",
+	  "megapixels": 24
+	},
+	"condition": "very good",
+	"points_earned": 70
+  },
+  {
+	"username": "user2",
+	"device_sold": "microwave oven",
+	"device_details": {
+	  "brand": "Panasonic",
+	  "model": "NN-SN936B",
+	  "capacity_liters": 2.2
+	},
+	"condition": "used",
+	"points_earned": 40
+  },
+  {
+	"username": "user3",
+	"device_sold": "refrigerator",
+	"device_details": {
+	  "brand": "Samsung",
+	  "model": "RF23M8070SR",
+	  "capacity_liters": 22
+	},
+	"condition": "fair",
+	"points_earned": 90
+  },
+  {
+	"username": "user3",
+	"device_sold": "refrigerator",
+	"device_details": {
+	  "brand": "Samsung",
+	  "model": "RF23M8070SR",
+	  "capacity_liters": 22
+	},
+	"condition": "fair",
+	"points_earned": 90
+  },
+  {
+	"username": "user3",
+	"device_sold": "refrigerator",
+	"device_details": {
+	  "brand": "Samsung",
+	  "model": "RF23M8070SR",
+	  "capacity_liters": 22
+	},
+	"condition": "fair",
+	"points_earned": 90
+  },
+  {
+	"username": "user3",
+	"device_sold": "refrigerator",
+	"device_details": {
+	  "brand": "Samsung",
+	  "model": "RF23M8070SR",
+	  "capacity_liters": 22
+	},
+	"condition": "fair",
+	"points_earned": 90
+  },
+  {
+	"username": "user3",
+	"device_sold": "refrigerator",
+	"device_details": {
+	  "brand": "Samsung",
+	  "model": "RF23M8070SR",
+	  "capacity_liters": 22
+	},
+	"condition": "fair",
+	"points_earned": 90
+  },
+  {
+	"username": "user3",
+	"device_sold": "refrigerator",
+	"device_details": {
+	  "brand": "Samsung",
+	  "model": "RF23M8070SR",
+	  "capacity_liters": 22
+	},
+	"condition": "fair",
+	"points_earned": 90
+  },
+  {
+	"username": "user3",
+	"device_sold": "refrigerator",
+	"device_details": {
+	  "brand": "Samsung",
+	  "model": "RF23M8070SR",
+	  "capacity_liters": 22
+	},
+	"condition": "fair",
+	"points_earned": 90
+  },
+  {
+	"username": "user3",
+	"device_sold": "refrigerator",
+	"device_details": {
+	  "brand": "Samsung",
+	  "model": "RF23M8070SR",
+	  "capacity_liters": 22
+	},
+	"condition": "fair",
+	"points_earned": 90
+  },
+  {
+	"username": "user3",
+	"device_sold": "refrigerator",
+	"device_details": {
+	  "brand": "Samsung",
+	  "model": "RF23M8070SR",
+	  "capacity_liters": 22
+	},
+	"condition": "fair",
+	"points_earned": 90
+  },
+  
+  {
+	"username": "user4",
+	"device_sold": "washing machine",
+	"device_details": {
+	  "brand": "LG",
+	  "model": "WM3900HWA",
+	  "capacity_kg": 9
+	},
+	"condition": "good",
+	"points_earned": 60
+  }
+	];
+
+	// Update the total counter
+	dataset.forEach(entry => {
+	  totalDevicesSold += entry.points_earned;
+	});
+	totalCounterElement.innerText = totalDevicesSold;
+
+	// Prepare data for the chart
+	const deviceLabels = Array.from(new Set(dataset.map(entry => entry.points_earned)));
+	const deviceData = deviceLabels.map(label =>
+	  dataset.filter(entry => entry.points_earned === label).length
+	);
+
+	// Create the pie chart
+	const ctx = document.getElementById('pieChart').getContext('2d');
+	new Chart(ctx, {
+	  type: 'pie',
+	  data: {
+		labels: deviceLabels,
+		datasets: [{
+		  data: deviceData,
+		  backgroundColor: [
+			'rgba(255, 199, 132, 0.7)',
+			'rgba(54, 102, 235, 0.7)',
+			'rgba(255, 206, 86, 0.7)',
+			'rgba(75, 102, 192, 3)',
+			'rgba(225, 192, 255, 0.7)',
+			'rgba(255, 159, 64, 0.7)',
+			'rgba(120, 120, 120, 0.7)',
+			'rgba(200, 100, 200, 0.7)',
+		  ],
+		}]
+	  },
+	  options: {
+		responsive: true,
+		maintainAspectRatio: false,
+		title: {
+		  display: true,
+		  text: 'Percentage of Devices Sold'
+		},
+	  }
+	});
+
+	 // Function to generate dynamic colors
+	 function generateDynamicColors(numColors) {
+        // Generate an array of dynamic colors based on the number of devices
+        // You can replace this with your own color generation logic
+        return Array.from({ length: numColors }, (_, index) =>
+          `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.7)`
+        );
+      }
+    
+  });

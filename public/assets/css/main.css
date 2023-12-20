@@ -4289,3 +4289,73 @@ input, select, textarea {
 #content {
   padding: 20px;
 }
+
+/* Add your custom styles for the pie chart here */
+canvas {
+    margin: 12px;
+    border: 1px solid #ddd; /* Add a border for better visibility */
+    border-radius: 8px; /* Optional: Add border radius for a rounded appearance */
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh; /* Adjust the height as needed */
+}
+
+#liveCounter {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #e2ece5;
+    background-color: #192018;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+/* Add any additional styles for other elements as needed */
+
+/* Add this to your existing CSS file */
+
+#liveCounter i {
+    margin-left: 5px;
+    font-size: 1.2em;
+}
+
+/* Add this to your existing CSS file */
+
+#liveCounter i {
+    margin-left: 5px;
+    font-size: 1.2em;
+}
+
+
+#one{
+
+
+	display: flex;
+}       	/* Add your custom styles here */
+		#liveCounter {
+			font-size: 18px;
+			font-weight: bold;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+	
+		.card {
+			background-color: #fff;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			padding: 20px;
+			border-radius: 8px;
+			margin-bottom: 20px;
+		}
+	
+		.card-header {
+			font-size: 24px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+	
+		.card-content {
+			font-size: 16px;
+		}
